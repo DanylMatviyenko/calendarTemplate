@@ -13,9 +13,4 @@ export function createBtn() {
     outputCalendar.prepend(vacationBtncell);
     vacationBtn.innerHTML = '+ Add vacation';
 
-    //кнопка суммы
-    let sumBtn = document.createElement('td');
-    outputCalendar.appendChild(sumBtn);
-    sumBtn.innerHTML = 'Sum';
-    sumBtn.classList.add('outputItem');
 };
