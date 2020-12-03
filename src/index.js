@@ -1,12 +1,10 @@
 import { renderCalendar } from "./renderCalendar";
-import { createBtn } from "./createBtn";
-
-
+// import { createBtn } from "./createBtn";
 
 let currentDate = new Date();
-
 renderCalendar(currentDate);
-createBtn();
+// createBtn();
+
 
 
 

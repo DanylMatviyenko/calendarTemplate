@@ -15,6 +15,8 @@ export function renderCalendar(currentDate) {
         .replace(",", "")
         .split(" ")[1];
 
+    outputCalendarHTML += `<td class="vacation-btn"<button >+ Add Vacation </button></td>`
+
     for (let i = 1; i <= daysInCurrentMonth; i++) {
         let chosenDate = new Date(
             currentDate.getFullYear(),
@@ -25,12 +27,14 @@ export function renderCalendar(currentDate) {
             .format(chosenDate)
             .replace(",", "")
             .split(" ");
+
         let isWeekend = dayName === "Sat" || dayName === "Sun";
         outputCalendarHTML += `<td class="outputItem ${isWeekend ? "weekend" : ""}">
-        <span class="outputDay">${dayName.slice(0, -1)}</span> 
-        <span class="outputDate">${date}</span>
-        </td>`;
+            <span class="outputDay">${dayName.slice(0, -1)}</span> 
+            <span class="outputDate">${date}</span>
+            </td>`;
     }
+
     outputCalendar.innerHTML = outputCalendarHTML;
 
 
